@@ -35,7 +35,7 @@ flutter_native_splash:
 
   # Set the branding padding from the bottom of the screen.  The default value is 0
   # (Not supported on web yet)
-  # branding_bottom_padding: 24
+  branding_bottom_padding: 16
 
   # The color_dark, background_image_dark, image_dark, branding_dark are parameters that set the background
   # and image when the device is in dark mode. If they are not specified, the app will use the
@@ -60,7 +60,7 @@ flutter_native_splash:
   # 768 pixels in diameter.  To fit a 1152x1152 image within a circle with a 768 diameter, simply
   # ensure that the most important design elements of your image are placed within a circular area
   # with a 768 diameter at the center of the 1152x1152 canvas.
-  image: assets/images/img.png
+  image: assets/images/img_1.png
 
   # Splash screen background color.
   color: "#202020"
@@ -74,14 +74,14 @@ flutter_native_splash:
   # The image_dark, color_dark, icon_background_color_dark, and branding_dark set values that
   # apply when the device is in dark mode. If they are not specified, the app will use the
   # parameters from above.  If there is no parameter above, the app will use the light mode values.
-  image_dark: assets/images/splash_icon.png
-  color_dark: "#202020"
+    #image_dark: assets/images/splash_icon.png
+    #color_dark: "#202020"
   #icon_background_color_dark: "#eeeeee"
 
   # The android, ios and web parameters can be used to disable generating a splash screen on a given
   # platform.
-  #android: false
-  #ios: false
+  #android: true
+  #ios: true
   #web: false
 
   # Platform specific images can be specified with the following parameters, which will override
@@ -105,7 +105,7 @@ flutter_native_splash:
   #background_image_web: "assets/background-web.png"
   #background_image_dark_web: "assets/dark-background-web.png"
   #branding_android: assets/brand-android.png
-  #branding_bottom_padding_android: 24
+  branding_bottom_padding_android: 16
   #branding_dark_android: assets/dart_dark-android.png
   #branding_ios: assets/brand-ios.png
   #branding_bottom_padding_ios: 24
