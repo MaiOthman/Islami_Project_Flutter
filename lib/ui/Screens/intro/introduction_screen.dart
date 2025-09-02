@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:islami_project/ui/Screens/intro/page_view_model.dart';
 
 import '../../../utilis/app_colors.dart';
 
@@ -17,6 +18,7 @@ class _MyIntroductionScreenState extends State<MyIntroductionScreen> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+    PageVM pVM = PageVM();
 
     return Scaffold(
       body: IntroductionScreen(key: introKey,
@@ -32,96 +34,12 @@ class _MyIntroductionScreenState extends State<MyIntroductionScreen> {
             ),
     ),
     pages: [
-      PageViewModel(
-        image: Image.asset('assets/images/img_2.png', height: height*0.40),
-        bodyWidget: Text('Welcome To Islami App',
-          style: TextStyle(color: AppColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w700),
-            textAlign: TextAlign.center
-        ),
-        title: '',
-        decoration: const PageDecoration(
-            imageFlex: 2,
-            bodyFlex: 1,
-            bodyPadding: EdgeInsets.all(16),
-            imagePadding: EdgeInsets.all(24)),
-      ),
-    PageViewModel(
-        titleWidget: Text('Welcome To Islami',
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: AppColors.primaryColor,
-              fontSize: 32,
-            )
-        ),
-      image: Image.asset('assets/images/img_3.png', height: height*0.40),
-      bodyWidget: Text('"We Are Very Excited To Have You In Our Community.",'
-        , style: TextStyle(color: AppColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w700),
-      textAlign: TextAlign.center
-      ),
-      decoration: const PageDecoration(
-          imageFlex: 2,
-          bodyFlex: 1,
-          bodyPadding: EdgeInsets.all(16),
-          imagePadding: EdgeInsets.all(24)),
-    ),
-      PageViewModel(
-        titleWidget: Text("Reading the Quran",
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: AppColors.primaryColor,
-              fontSize: 32,
-            )
-        ),
-        image: Image.asset('assets/images/img_4.png', height: height*0.40),
-        bodyWidget: Text('Read, and your Lord is the Most Generous.',
-          style: TextStyle(color: AppColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w700),
-            textAlign: TextAlign.center
-        ),
-        decoration: const PageDecoration(
-          titlePadding: EdgeInsets.all(16),
-            imageFlex: 2,
-            bodyFlex: 1,
-            bodyPadding: EdgeInsets.all(16),
-            imagePadding: EdgeInsets.all(24)),
-      ),
-    PageViewModel(
-    titleWidget: Text("Bearish",
-    textAlign: TextAlign.center,
-    style: const TextStyle(
-    color: AppColors.primaryColor,
-    fontSize: 32,
-    )
-    ),
-    image: Image.asset('assets/images/img_5.png', height: height*0.40),
-    bodyWidget: Text("Praise the name of your Lord, the Most High.",
-      style: TextStyle(color: AppColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w700),
-        textAlign: TextAlign.center
-    ),
-    decoration: const PageDecoration(
-    imageFlex: 2,
-    bodyFlex: 1,
-        bodyPadding: EdgeInsets.all(16),
-        imagePadding: EdgeInsets.all(24)),
-    ),
-    PageViewModel(
-    titleWidget: Text("Holy Quran Radio",
-    textAlign: TextAlign.center,
-    style: const TextStyle(
-    color: AppColors.primaryColor,
-    fontSize: 32,
-    )
-    ),
-    image: Image.asset('assets/images/img_6.png', height: height*0.40),
-    bodyWidget: Text( "You can listen to the Holy Quran Radio through the application for free and easily."
-      , style: TextStyle(color: AppColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w700),
-    textAlign: TextAlign.center,
-    ),
-    decoration: const PageDecoration(
-    imageFlex: 2,
-    bodyFlex: 1,
-        bodyPadding: EdgeInsets.all(16),
-        imagePadding: EdgeInsets.all(24)),
-    )
+      pVM.pageVM('', 'img_2.png', 'Welcome To Islami App', height),
+      pVM.pageVM('Welcome To Islami', 'img_3.png', "We Are Very Excited To Have You In Our Community.", height),
+      pVM.pageVM("Reading the Quran", 'img_4.png', 'Read, and your Lord is the Most Generous.', height),
+      pVM.pageVM("Bearish", 'img_5.png', "Praise the name of your Lord, the Most High.", height),
+      pVM.pageVM("Holy Quran Radio", 'img_6.png', "You can listen to the Holy Quran Radio through the application for free and easily.", height),
+
     ],
     onDone: () =>{},
     onSkip: () =>{}, // You can override onSkip callback
