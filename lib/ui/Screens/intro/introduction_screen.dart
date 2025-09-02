@@ -3,6 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:islami_project/ui/Screens/intro/page_view_model.dart';
+import 'package:islami_project/utilis/app_assets.dart';
+import 'package:islami_project/utilis/app_routes.dart';
 
 import '../../../utilis/app_colors.dart';
 
@@ -30,7 +32,7 @@ class _MyIntroductionScreenState extends State<MyIntroductionScreen> {
         alignment: Alignment.center,
         child: Padding(
         padding: const EdgeInsets.only(top: 16, right: 16),
-            child: Image.asset('assets/images/img_7.png', height: height * 0.13),
+            child: Image.asset(AppAssets.islami_title, height: height * 0.13),
             ),
     ),
     pages: [
@@ -41,8 +43,8 @@ class _MyIntroductionScreenState extends State<MyIntroductionScreen> {
       pVM.pageVM("Holy Quran Radio", 'img_6.png', "You can listen to the Holy Quran Radio through the application for free and easily.", height),
 
     ],
-    onDone: () =>{},
-    onSkip: () =>{}, // You can override onSkip callback
+    onDone: () => Navigator.of(context).pushReplacementNamed(AppRoutes.homeRouteName),
+    onSkip: () =>Navigator.of(context).pushReplacementNamed(AppRoutes.homeRouteName), // You can override onSkip callback
     showSkipButton: true,
     skipOrBackFlex: 0,
     nextFlex: 0,
