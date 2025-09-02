@@ -12,5 +12,8 @@ class AppAssets {
   static const String icon_radio = 'assets/images/radio.png';
   static const String icon_time= 'assets/images/time.png';
 
+  static const String sebha_head = 'assets/images/sebha_head.png';
+  static const String sebha_body = 'assets/images/sebha_body.png';
+
 
 }
