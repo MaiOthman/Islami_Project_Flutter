@@ -21,6 +21,9 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> widgetList = [QuranTab(), HadethTab(),SebhaTab(), RadioTab(), TimeTab()];
   @override
   Widget build(BuildContext context) {
+    double sHeight = MediaQuery.of(context).size.height;
+    double sWidth = MediaQuery.of(context).size.width;
+
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(image: AssetImage(BgsList[widget.selectedIndex]),
@@ -28,9 +31,15 @@ class _HomeScreenState extends State<HomeScreen> {
         )
       ),
       child: Scaffold(
-        body: Column(children: [
-          Image.asset(AppAssets.islami_title),
-          Expanded(child: widgetList[widget.selectedIndex])
+        body: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          Padding(
+            padding: EdgeInsets.only(top: sHeight * 0.03),
+            child: Image.asset(AppAssets.islami_title, height: sHeight * 0.15, width: sWidth * 0.69,),
+          ),
+          Expanded(child: Padding(
+            padding: EdgeInsets.all(sWidth*0.05),
+            child: widgetList[widget.selectedIndex],
+          ))
         ],
         ),
        bottomNavigationBar: BottomNavigationBar(
