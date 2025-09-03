@@ -15,5 +15,12 @@ class AppAssets {
   static const String sebha_head = 'assets/images/sebha_head.png';
   static const String sebha_body = 'assets/images/sebha_body.png';
 
+  static const String frame = 'assets/images/frame.png';
+  static const String reading = 'assets/images/reading.png';
+  static const String img_most_recent = 'assets/images/img_most_recent.png';
+  static const String frame_num_aya = 'assets/images/icon_quran.png';
+
+
+
 
 }
