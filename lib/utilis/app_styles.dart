@@ -18,6 +18,9 @@ class AppStyles{
   static final TextStyle Bold20Primary = GoogleFonts.elMessiri(
     color: AppColors.primaryColor, fontWeight: FontWeight.w700, fontSize: 20,
   );
+  static final TextStyle Bold20Black = GoogleFonts.elMessiri(
+    color: AppColors.blackColor, fontWeight: FontWeight.w700, fontSize: 20,
+  );
   static final TextStyle Bold24Primary = GoogleFonts.elMessiri(
     color: AppColors.primaryColor, fontWeight: FontWeight.w700, fontSize: 24,
   );
