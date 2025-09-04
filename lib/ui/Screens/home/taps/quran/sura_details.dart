@@ -25,7 +25,7 @@ class _SuraDetailsState extends State<SuraDetails> {
     int index2 = ModalRoute.of(context)?.settings.arguments as int;
     if(verses.isEmpty) loadSoraFile(index2);
     return Scaffold(
-      appBar: AppBar(leading: Icon(Icons.arrow_back, color: AppColors.primaryColor,)
+      appBar: AppBar(leading: InkWell(child:Icon(Icons.arrow_back, color: AppColors.primaryColor) , onTap: (){Navigator.of(context).pop();},)
         ,title: Text(QuranResources.englishQuranSurasList[index2], style: AppStyles.Bold20Primary,
         ), centerTitle: true, backgroundColor: AppColors.blackColor,
       actions: [InkWell(child: Icon(Icons.table_rows_rounded, color: AppColors.primaryColor)
