@@ -26,7 +26,7 @@ class _SebhaTabState extends State<SebhaTab> {
         alignment: Alignment.center,
         children: [
           AnimatedRotation(turns: turns, duration: const Duration(seconds: 1),
-              child: Image.asset(AppAssets.sebha_body)),
+              child: InkWell(child: Image.asset(AppAssets.sebha_body), onTap: onButtonPressed)),
           Column(children: [
             Text(widget.tsbeh[widget.index],   textDirection: TextDirection.rtl, textAlign: TextAlign.center,
               style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700, color: AppColors.whiteColor),),
