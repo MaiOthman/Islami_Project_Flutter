@@ -1,8 +1,19 @@
+import 'dart:math' as Math;
+
 import 'package:flutter/material.dart';
 import 'package:islami_project/utilis/app_assets.dart';
 import 'package:islami_project/utilis/app_colors.dart';
 
-class SebhaTab extends StatelessWidget{
+class SebhaTab extends StatefulWidget{
+  @override
+  State<SebhaTab> createState() => _SebhaTabState();
+  List<String> tsbeh = ['سبحان الله', 'الحمدلله', 'لا اله الا الله', 'الله اكبر'];
+  int index = 0;
+}
+
+class _SebhaTabState extends State<SebhaTab> {
+  double turns = 0;
+  int count = 0;
   @override
   Widget build(BuildContext context) {
     return Column(children: [
@@ -14,18 +25,31 @@ class SebhaTab extends StatelessWidget{
       Stack(
         alignment: Alignment.center,
         children: [
-          Image.asset(AppAssets.sebha_body),
+          AnimatedRotation(turns: turns, duration: const Duration(seconds: 1),
+              child: Image.asset(AppAssets.sebha_body)),
           Column(children: [
-            Text("سبحان الله",   textDirection: TextDirection.rtl, textAlign: TextAlign.center,
+            Text(widget.tsbeh[widget.index],   textDirection: TextDirection.rtl, textAlign: TextAlign.center,
               style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700, color: AppColors.whiteColor),),
-            Text("30",   textDirection: TextDirection.rtl, textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700, color: AppColors.whiteColor),)
+            TextButton(
+              onPressed: onButtonPressed, child: Text("${count}",   textDirection: TextDirection.rtl, textAlign: TextAlign.center,
+    style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700, color: AppColors.whiteColor)),)
           ],)
-
         ],
       )
     ],);
   }
-
+  void onButtonPressed(){
+    setState(() {
+      turns = turns+ 0.03;
+      count++;
+      if(count == 33){
+        count = 0;
+        widget.index++;
+        if(widget.index == widget.tsbeh.length){
+          widget.index = 0;
+        }
+      }
+    });
+  }
 
 }
