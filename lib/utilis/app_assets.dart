@@ -19,6 +19,9 @@ class AppAssets {
   static const String reading = 'assets/images/reading.png';
   static const String img_most_recent = 'assets/images/img_most_recent.png';
   static const String frame_num_aya = 'assets/images/icon_quran.png';
+  static const String bg_radio = 'assets/images/bg_radio.png';
+  static const String played_radio = 'assets/images/img_9.png';
+
 
 
 
