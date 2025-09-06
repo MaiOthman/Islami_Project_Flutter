@@ -22,6 +22,13 @@ class AppAssets {
   static const String bg_radio = 'assets/images/bg_radio.png';
   static const String played_radio = 'assets/images/img_9.png';
 
+  static const String evening_azkar = 'assets/images/azkar_evening.png';
+  static const String morning_azkar = 'assets/images/azkar_morning.png';
+  static const String time_shape = 'assets/images/time_shape.png';
+
+
+
+
 
 
 
