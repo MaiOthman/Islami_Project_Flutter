@@ -3,6 +3,7 @@ import 'dart:math' as Math;
 import 'package:flutter/material.dart';
 import 'package:islami_project/utilis/app_assets.dart';
 import 'package:islami_project/utilis/app_colors.dart';
+import 'package:islami_project/utilis/app_styles.dart';
 
 class SebhaTab extends StatefulWidget{
   @override
@@ -19,14 +20,18 @@ class _SebhaTabState extends State<SebhaTab> {
     return Column(children: [
       Text('سَبِّحِ اسْمَ رَبِّكَ الأعلى ',
         textDirection: TextDirection.rtl, textAlign: TextAlign.center,
-      style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700, color: AppColors.whiteColor),
+      style: AppStyles.Bold36White,
       ),
       Image.asset(AppAssets.sebha_head),
       Stack(
         alignment: Alignment.center,
         children: [
           AnimatedRotation(turns: turns, duration: const Duration(seconds: 1),
-              child: InkWell(child: Image.asset(AppAssets.sebha_body), onTap: onButtonPressed)),
+              child: InkWell(onTap: onButtonPressed, child: Image.asset(AppAssets.sebha_body),
+                highlightColor: Colors.transparent,
+                splashColor: Colors.transparent,
+                splashFactory: NoSplash.splashFactory,
+                )),
           Column(children: [
             Text(widget.tsbeh[widget.index],   textDirection: TextDirection.rtl, textAlign: TextAlign.center,
               style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700, color: AppColors.whiteColor),),

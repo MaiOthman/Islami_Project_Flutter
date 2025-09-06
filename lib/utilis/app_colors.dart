@@ -8,6 +8,9 @@ class AppColors{
   static const Color whiteColor = Color(0xffffffff);
   static const Color transparentColor = Colors.transparent;
   static const Color blackContainerColor = Color(0x99202020);
+  static const Color timerBlackColor = Color(0xBF202020);
   static const Color gray = Color(0xff707070);
+  static const Color pieg = Color(0xffb19768);
+  static const Color braun = Color(0xff856B3F);
 
 }
