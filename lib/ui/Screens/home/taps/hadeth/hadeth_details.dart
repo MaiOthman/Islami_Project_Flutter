@@ -21,6 +21,7 @@ class HadethDateils extends StatelessWidget{
        // title: Text("Hadith ${hadeth.index}", style: AppStyles.Bold20Primary),
       ),
       body:
+
         Column(children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
