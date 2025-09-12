@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_project/ui/Screens/home/taps/time/container_azkar.dart';
 import 'package:islami_project/ui/Screens/home/taps/time/container_mwaqet.dart';
@@ -39,14 +40,17 @@ class TimeTab extends StatelessWidget{
                   Text('09 Muh,\n1446',style: AppStyles.Bold16White, textAlign: TextAlign.center, )
                 ],),
                  SizedBox(
-                    width: double.infinity,
-                    height: height * 0.12,
-                    child: ListView.separated(
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) => ContainerMwaqet(),
-                        separatorBuilder: (context, index) =>
-                            SizedBox(width: width * 0.02),
-                        itemCount: 6),
+                    child:
+                    CarouselSlider(
+                    options: CarouselOptions(
+                        enlargeCenterPage: true,
+                        height: height * 0.12,
+                        viewportFraction: 0.2
+                        ),
+                   items: List.generate(5, (index)=>index).map((index) {
+                  return FittedBox(child: ContainerMwaqet(index: index,));
+                        }).toList(),
+                        ),
                   ),
 
                 Row(
