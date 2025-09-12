@@ -12,5 +12,6 @@ class AppColors{
   static const Color gray = Color(0xff707070);
   static const Color pieg = Color(0xffb19768);
   static const Color braun = Color(0xff856B3F);
+  static const Color black = Color(0xff000000);
 
 }

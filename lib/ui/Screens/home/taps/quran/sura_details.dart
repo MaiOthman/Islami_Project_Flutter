@@ -6,10 +6,12 @@ import 'package:islami_project/ui/Screens/home/taps/quran/sura_content.dart';
 import 'package:islami_project/ui/Screens/home/taps/quran/sura_content_column.dart';
 import 'package:islami_project/utilis/app_assets.dart';
 import 'package:islami_project/utilis/app_colors.dart';
+import 'package:islami_project/utilis/app_routes.dart';
 import 'package:islami_project/utilis/app_styles.dart';
 
 
 class SuraDetails extends StatefulWidget{
+
   @override
   State<SuraDetails> createState() => _SuraDetailsState();
 }
@@ -48,7 +50,6 @@ class _SuraDetailsState extends State<SuraDetails> {
       for(int i = 0; i < suraLine.length; i++){
         suraString = suraString+ suraLine[i] + '[${i+1}]  ' ;
       }
-      print(suraString);
     setState(() {
       verses = suraLine;
     });

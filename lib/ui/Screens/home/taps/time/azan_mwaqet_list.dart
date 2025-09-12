@@ -18,7 +18,7 @@ class AzanMwaqetList extends StatelessWidget {
           height: height * 0.15,
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => ContainerMwaqet(),
+              itemBuilder: (context, index) => ContainerMwaqet(index:index),
               separatorBuilder: (context, index) =>
                   SizedBox(width: width * 0.02),
               itemCount: 6),
