@@ -21,7 +21,7 @@ class SuraItem extends StatelessWidget{
       SizedBox(width: sWidth*0.04,),
       Column(crossAxisAlignment:CrossAxisAlignment.start, children: [
         Text(englishName, style: AppStyles.Bold20White,),
-        Text(versesNumber, style: AppStyles.Bold14White,)
+        Text('$versesNumber Verses', style: AppStyles.Bold14White,)
       ],),
       Spacer(),
       Text(arabicName, style: AppStyles.Bold20White)

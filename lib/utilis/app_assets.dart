@@ -26,6 +26,16 @@ class AppAssets {
   static const String morning_azkar = 'assets/images/azkar_morning.png';
   static const String time_shape = 'assets/images/time_shape.png';
 
+  static const String left_corner = 'assets/images/left_corner.png';
+  static const String right_corner = 'assets/images/right_corner.png';
+  static const String bottom = 'assets/images/bottom.png';
+
+  static const String left_corner_primary = 'assets/images/left_primary.png';
+  static const String right_corner_primary = 'assets/images/right_primary.png';
+  static const String bottom_primary = 'assets/images/bottom_primary.png';
+
+  static const String hadeth_details = 'assets/images/hadeth_reading.png';
+
 
 
 
